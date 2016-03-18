@@ -20,7 +20,7 @@ io.on("connection", function (socket) {
 
 
     socket.emit("message", {
-        text: "welcome to the chat: ",
+        text: "welcome to the chat! ",
         timestamp: moment().valueOf(),
     });
 });
