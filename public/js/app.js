@@ -13,14 +13,22 @@ socket.on("connect", function () {
         room: room
     });
 
+    
+
 
 });
+
+
+
 
 socket.on("message", function (message) {
     var momentTimestamp = moment.utc(message.timestamp);
     var $message = jQuery(".messages");
     console.log("New Message");
     console.log(message.text);
+
+
+
 
     $message.append("<p><strong>" + message.name + " "+ momentTimestamp.local().format("HH:mm") + "</strong></p>")
     $message.append("<p>" + message.text + "</p>")
